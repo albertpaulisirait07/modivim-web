@@ -17,18 +17,23 @@
 
     <main class="center-content">
         <div class="card">
-            <h2 style="margin-bottom: 20px; color: #d4af37;">Masuk Mahasiswa</h2>
-            <!-- Form ini dihubungkan dengan Javascript -->
+            <!-- Bagian ini akan menampilkan logo kampus, ditempatkan di atas teks login -->
+            <div style="text-align: center; margin-bottom: 15px;">
+                <img src="assets/logo-unimed.png" alt="Logo Universitas Negeri Medan" style="width: 120px; height: auto;">
+            </div>
+            
+            <h2 style="text-align: center; margin-bottom: 25px; color: #d4af37; font-size: 1.8rem;">Masuk Mahasiswa</h2>
+            
             <form onsubmit="prosesLogin(event)">
                 <div class="form-group">
-                    <label for="nim">NIM</label>
-                    <input type="text" id="nim" required placeholder="Masukkan NIM Anda">
+                    <label for="nim" style="color: #ccc; font-weight: bold;">NIM (Nomor Induk Mahasiswa)</label>
+                    <input type="text" id="nim" required placeholder="Masukkan NIM Anda" style="padding: 12px; font-size: 1rem;">
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" required placeholder="Masukkan Password">
+                    <label for="password" style="color: #ccc; font-weight: bold;">Password</label>
+                    <input type="password" id="password" required placeholder="Masukkan Password" style="padding: 12px; font-size: 1rem;">
                 </div>
-                <button type="submit" class="btn-gold" style="width: 100%; margin-top: 10px;">Masuk Sekarang</button>
+                <button type="submit" class="btn-gold" style="width: 100%; margin-top: 15px; padding: 12px; font-size: 1.1rem;">Masuk ke Ruang Misi</button>
             </form>
         </div>
     </main>

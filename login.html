@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MoDiViM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>MoDiViM</h1>
+        <nav>
+            <a href="index.html">Kembali ke Beranda</a>
+        </nav>
+    </header>
+
+    <main class="center-content">
+        <div class="card">
+            <h2 style="margin-bottom: 20px; color: #d4af37;">Masuk Mahasiswa</h2>
+            <!-- Form ini dihubungkan dengan Javascript -->
+            <form onsubmit="prosesLogin(event)">
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" required placeholder="Masukkan NIM Anda">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Masukkan Password">
+                </div>
+                <button type="submit" class="btn-gold" style="width: 100%; margin-top: 10px;">Masuk Sekarang</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

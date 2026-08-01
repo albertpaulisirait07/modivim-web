@@ -1,8 +1,8 @@
-// GANTI TEKS DI BAWAH INI DENGAN URL APLIKASI WEB GAS ANDA
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwwzRSEF7-LL0qoyt3evKkPb5P9Q1YVmzANHcn0h2oBEATlAfGZwjsMfUeLUuwJngW0rA/exec';
+// GANTI TEKS DI BAWAH INI DENGAN URL WEB APP GAS ANDA
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxsK3OLPX2EkWG2UFzgYLHYcH4vnXQy-RyeHss_kJYDObFRc03IgSAAZxsEBZjXcJUW/exec';
 
 // ---------------------------------------------------------
-// 1. FUNGSI UNTUK LOGIN MAHASISWA
+// FUNGSI UNTUK LOGIN MAHASISWA
 // ---------------------------------------------------------
 function prosesLogin(event) {
     event.preventDefault(); 
@@ -28,22 +28,21 @@ function prosesLogin(event) {
                 window.location.href = "dashboard.html";
             } else {
                 alert("Login Gagal: " + hasil.pesan);
-                tombol.innerText = "Masuk ke Ruang Misi"; 
+                tombol.innerText = "Masuk Galeri Museum"; 
             }
         })
         .catch(error => {
             alert("Terjadi kendala jaringan. Coba lagi.");
-            tombol.innerText = "Masuk ke Ruang Misi";
+            tombol.innerText = "Masuk Galeri Museum";
         });
 }
 
 // ---------------------------------------------------------
-// 2. FUNGSI UNTUK MENGIRIM TUGAS ANALISIS ARTEFAK
+// FUNGSI UNTUK MENGIRIM TUGAS ANALISIS ARTEFAK
 // ---------------------------------------------------------
 function kirimAnalisis(event) {
     event.preventDefault();
     
-    // Asumsi halaman galeri memiliki input dengan ID 'jawabanAnalisis' dan teks 'namaArtefak'
     const hasilAnalisis = document.getElementById('jawabanAnalisis') ? document.getElementById('jawabanAnalisis').value : "Uji Coba Analisis";
     const artefakID = document.getElementById('namaArtefak') ? document.getElementById('namaArtefak').innerText : "Artefak Uji Coba";
     const tombol = event.target.querySelector('button') || document.getElementById('btnKirim');

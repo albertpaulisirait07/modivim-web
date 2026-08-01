@@ -1,5 +1,5 @@
 // GANTI TEKS DI BAWAH INI DENGAN URL APLIKASI WEB GAS ANDA
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxR3HoaBHLbs8CAwiAzKOfQkuZuXLRwVgYejl-COFHNthRYHYPuVxs4E8tqavtNcmbwmA/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwwzRSEF7-LL0qoyt3evKkPb5P9Q1YVmzANHcn0h2oBEATlAfGZwjsMfUeLUuwJngW0rA/exec';
 
 // ---------------------------------------------------------
 // 1. FUNGSI UNTUK LOGIN MAHASISWA

@@ -3,40 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - MoDiViM</title>
+    <title>Login - Virtual Museum Sejarah Indonesia</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            border-top: 5px solid #c59b27;
+        }
+        .logo-container img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-size: 1.2rem;
+            color: #222;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .sub-title {
+            font-size: 0.9rem;
+            color: #b8860b;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        .institution {
+            font-size: 0.75rem;
+            color: #555;
+            text-transform: uppercase;
+            line-height: 1.4;
+            margin-bottom: 30px;
+            border-top: 1px dashed #ddd;
+            border-bottom: 1px dashed #ddd;
+            padding: 10px 0;
+        }
+        .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            border-color: #c59b27;
+        }
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #c59b27, #9a761c);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        .btn-login:hover {
+            background: linear-gradient(135deg, #b0881f, #826216);
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>MoDiViM</h1>
-        <nav>
-            <a href="index.html">Kembali ke Beranda</a>
-        </nav>
-    </header>
-
-    <main class="center-content">
-        <div class="card">
-            <!-- Bagian ini akan menampilkan logo kampus, ditempatkan di atas teks login -->
-            <div style="text-align: center; margin-bottom: 15px;">
-                <img src="Assets/logo_unimed.png" alt="Logo Universitas Negeri Medan" style="width: 120px; height: auto;">
-            </div>
-            
-            <h2 style="text-align: center; margin-bottom: 25px; color: #d4af37; font-size: 1.8rem;">Masuk Mahasiswa</h2>
-            
-            <form onsubmit="prosesLogin(event)">
-                <div class="form-group">
-                    <label for="nim" style="color: #ccc; font-weight: bold;">NIM (Nomor Induk Mahasiswa)</label>
-                    <input type="text" id="nim" required placeholder="Masukkan NIM Anda" style="padding: 12px; font-size: 1rem;">
-                </div>
-                <div class="form-group">
-                    <label for="password" style="color: #ccc; font-weight: bold;">Password</label>
-                    <input type="password" id="password" required placeholder="Masukkan Password" style="padding: 12px; font-size: 1rem;">
-                </div>
-                <button type="submit" class="btn-gold" style="width: 100%; margin-top: 15px; padding: 12px; font-size: 1.1rem;">Masuk ke Ruang Misi</button>
-            </form>
+    <div class="login-card">
+        <div class="logo-container">
+            <img src="Assets/logo_unimed.png" alt="Logo Unimed">
         </div>
-    </main>
+
+        <h2>VIRTUAL MUSEUM SEJARAH INDONESIA</h2>
+        <div class="sub-title">MASA ISLAM</div>
+
+        <div class="institution">
+            JURUSAN PENDIDIKAN SEJARAH<br>
+            FAKULTAS ILMU SOSIAL<br>
+            UNIVERSITAS NEGERI MEDAN
+        </div>
+
+        <form onsubmit="prosesLogin(event)">
+            <div class="form-group">
+                <label for="nim">NIM / USERNAME</label>
+                <input type="text" id="nim" required placeholder="Masukkan NIM Anda">
+            </div>
+
+            <div class="form-group">
+                <label for="password">KATA SANDI</label>
+                <input type="password" id="password" required placeholder="Masukkan kata sandi">
+            </div>
+
+            <button type="submit" class="btn-login">Masuk Galeri Museum</button>
+        </form>
+    </div>
 
     <script src="script.js"></script>
 </body>
